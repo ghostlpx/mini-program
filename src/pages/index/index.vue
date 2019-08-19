@@ -1,15 +1,16 @@
 <template>
   <div>
-    hello world
+    <span class="name">hello world</span>
+    <van-button type="primary">按钮</van-button>
   </div>
 </template>
 
 <script>
-  var sss = 123
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .name {
     color: red;
+    font-weight: bold;
   }
 </style>
