@@ -1,30 +1,20 @@
 <template>
-  <div>
-    <span class="name">hello world</span>
-    <van-button type="primary" @click="jump">路由</van-button><br />
-    <van-button type="primary" @click="handleGet">异步请求</van-button>
+  <div class="home">
+    <SearchBar />
   </div>
 </template>
 
 <script>
-  import { get } from '@/utils/request'
+  import SearchBar from '../../components/home/SerachBar'
   export default {
+    components: {
+      SearchBar
+    },
     methods: {
-      jump() {
-        this.$router.push('/pages/index/main')
-      },
-      handleGet() {
-        get('http://www.baidu.com').then(res => {
-          console.log('handleResponse....')
-        })
-      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .name {
-    color: red;
-    font-weight: bold;
-  }
+  
 </style>
